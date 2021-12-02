@@ -19,7 +19,6 @@ const data = fs
 // this makes them null and we can skip the computation.
 function getNumberOfIncreases(data, windowSize = 3) {
   return data.reduce(function (count, current, currentIndex) {
-    console.log(data[currentIndex + windowSize] > current);
     return data[currentIndex + windowSize] > current ? count + 1 : count;
   }, 0);
 }
